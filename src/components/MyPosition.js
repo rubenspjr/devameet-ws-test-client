@@ -1,7 +1,7 @@
-import { useState } from "react";
+
 
 export const MyPosition = ({ position, videoRef, peerVideoConnection, data }) => {
-    const togglMute = async () => {
+    const toglMute = async () => {
         let payload = {
             userId: data.user,
             link: data.link,
@@ -21,7 +21,7 @@ export const MyPosition = ({ position, videoRef, peerVideoConnection, data }) =>
             <div className="video">
                 {/* <audio ref={videoRef} autoPlay playsInline muted /> */}
                 <video ref={videoRef} autoPlay playsInline muted />
-                <button type="button" onClick={togglMute}>{position?.muted ? 'Desmutar' : 'Mutar'}</button>
+                <button type="button" onClick={toglMute}>{position?.muted ? 'Desmutar' : 'Mutar'}</button>
             </div>
         </div>
     );
